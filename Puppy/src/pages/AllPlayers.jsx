@@ -1,5 +1,6 @@
 import { fetchAllPlayers } from "../API"
 import {useState, useEffect} from  "react"
+import PlayerCard from "./PlayerCard"
 
 export default function AllPlayers(){
     const[players, setPlayers] = useState([])
@@ -17,25 +18,26 @@ export default function AllPlayers(){
     
     
     
-    
-    
     return(
-        <div>
+        <section>
             <h1>AllPlayers</h1>
+            <main>
+                {
+                    players.map((player) =>(
+                            <PlayerCard 
+                                key={player.id}
+                                player ={player}
 
-            {
-                players.map(player => {
-                    <div key={ player.key}>
-                        <h2>name:{player.name}</h2>
-                        <p>breed:{player.breed} </p>
-                        <img src = {player.image} alt={players[0].name} />
-                    </div>
-                })
+                            />
+        
+                        )
+                    )
 
 
-            }
-
-        </div>
+                }
+            </main>
+        </section>
+        
 
     )
 }
