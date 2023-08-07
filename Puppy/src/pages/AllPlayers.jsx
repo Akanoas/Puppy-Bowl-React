@@ -1,7 +1,6 @@
 import { fetchAllPlayers } from "../API"
 import {useState, useEffect} from  "react"
-import PlayerCard from "./PlayerCard"
-
+import PlayerCard from "../Components/PlayerCard"
 export default function AllPlayers(){
     const[players, setPlayers] = useState([])
     
@@ -10,7 +9,6 @@ export default function AllPlayers(){
         async function fetchData(){
             const data = await fetchAllPlayers()
             setPlayers(data)
-
         }
 
         fetchData()
