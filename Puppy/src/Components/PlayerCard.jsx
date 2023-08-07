@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 export default function PlayerCard(player){
     const {id, name, breed, imageUrl}= player;

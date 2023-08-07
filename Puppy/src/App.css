@@ -40,13 +40,24 @@
 .read-the-docs {
   color: #888;
 }
+
 main {
   display: flex;
   flex-wrap: wrap;
-  width: 1500px;
+  width: 80%;
   margin: 0 auto;
-
+}
+.playerCard {
+  padding: 30px;
 }
 .playerCard img {
   height: 200px;
+}
+
+.linkButton {
+  border: 1px solid red;
+  padding: 10px;
+}
+.single-player img{
+  width: 200px
 }
